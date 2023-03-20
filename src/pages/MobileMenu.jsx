@@ -8,18 +8,28 @@ import {BiMenu} from "react-icons/bi";
 import { useState } from 'react';
 
 const MobileMenu = () => {
+  //menu icinde menu click olduqda acilib baglansin
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const handleButtonClick = () => {
-        setIsMenuOpen(!isMenuOpen)
+    const handleButtonClick = () => {   
+       setIsMenuOpen(!isMenuOpen);  
       }
- 
-    const [openMenu,setOpenMenu]= useState(true);
-    const onHandleClick=()=>{
-        setOpenMenu(!openMenu)
-      }
+   //x btnuna click olduqda menu baglansin
+    
+    const onHandleMenuClickSlide =()=>{
+      
+     let overlaySlide= document.querySelector(".overlay");
+     overlaySlide.classList.remove("overlay-active");
+     overlaySlide.classList.add("overlay-deactive");
+    }
+   
+    const cancelMenu=()=>{
+      let overlaySlide= document.querySelector(".overlay");
+      overlaySlide.classList.remove("overlay-active");
+      overlaySlide.classList.add("overlay-deactive");
+     }
 
     
-   
+    
     
  
       
@@ -27,10 +37,10 @@ const MobileMenu = () => {
   return (
     
    
-    <div className='overlay'>
+    <div className='overlay overlay-active  overlay-deactive'  onClick={onHandleMenuClickSlide}>
 
-        {<div className="mobilemenu">
-          <button className="cancel-btn">
+        <div className="mobilemenu" onClick={cancelMenu}>
+          <button className="cancel-btn" >
           < MdClose/>
           </button>
         
@@ -44,7 +54,7 @@ const MobileMenu = () => {
           <NavLink to="/"> <img src={logo} alt="header-logo" /></NavLink>
         </div>
            <div className="menu">
-               <div className="menu-bar-btn">menu <button onClick={handleButtonClick}><BiMenu/></button></div>
+               <div className="menu-bar-btn" >menu <button onClick={handleButtonClick}><BiMenu/></button></div>
                {isMenuOpen && (
         
           <ul className='menu-open'>
@@ -66,7 +76,7 @@ const MobileMenu = () => {
            <div className="login-register">
            <Link to="/login">Login/Register</Link>
            </div>
-        </div>}
+        </div>
     </div>
   )
 

@@ -1,4 +1,6 @@
 .overlay{
+    
+    transition: all 1s ease;
     position: fixed;
     top: 0;
     left: 0;
@@ -7,6 +9,7 @@
     background-color: rgba(0,0,0,0.5);;
     z-index: 100;
     .mobilemenu{
+        z-index: 102;
         position: absolute;
         top: 0;
         left: 0;
@@ -108,3 +111,10 @@
     }
 }
 
+.overlay-active{
+    left: 0; 
+}
+
+.overlay-deactive{
+    left: -100%; 
+}

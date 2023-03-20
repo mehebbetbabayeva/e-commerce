@@ -7,7 +7,13 @@ import {BiMenu} from "react-icons/bi";
 
 
 const Header = () => {
-    
+    //menu icona click olduqda menu slide acilsin
+
+  const onHandleMenuClick =()=>{
+    let overlay = document.querySelector(".overlay-deactive");
+    overlay.classList.remove("overlay-deactive");
+    overlay.classList.add("overlay-active")
+  }
 
   return (
     <header>
@@ -33,7 +39,7 @@ const Header = () => {
                 <li><Link><SlBag/></Link></li>
             </ul>
         </div>
-        <button className='header-btn'><BiMenu/></button>   
+        <button className='header-btn' onClick={onHandleMenuClick}><BiMenu/></button>   
     </header>
   )
 }
