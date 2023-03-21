@@ -8,6 +8,7 @@ import Search from "./pages/Search";
 import Login from "./pages/Login";
 import MobileMenu from "./pages/MobileMenu";
 import Products from "./pages/Products";
+import Carusel from "./pages/Carusel";
 function App() {
   return (
     <>
@@ -22,6 +23,7 @@ function App() {
     <Route path="/login" element={<Login/>}/>
     </Routes>
     <Products/>
+    <Carusel/>
     </>
   );
 }

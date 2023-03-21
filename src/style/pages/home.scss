@@ -1,5 +1,5 @@
 #home{
-
+background-color: white;
     height: 100vh;
     display: flex;
     flex-wrap: wrap;
@@ -41,11 +41,12 @@
             width: 320px;  
             background-size: cover ;
         background-position: center;
+        
         h1{
             font-size: 30px;  
         }
         p{
-           width: 500px;
+           width: 100%;
             margin :15px 0;
             font-size: 18px;
             color: #7E668B;

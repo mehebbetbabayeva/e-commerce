@@ -1,5 +1,4 @@
 .overlay{
-    
     transition: all 1s ease;
     position: fixed;
     top: 0;
@@ -42,11 +41,27 @@
                 justify-content: center;
                 li{
                     margin-left: 15px;
+                    position: relative;
                     a{
                         color: black;
                         font-size: 20px;
-                    }
+                    }   
+                    span{
+                        position: absolute;
+                        bottom: 20px;
+                        left: 12px;
+                        background-color: black;
+                        color: white;
+                        font-size: 15px;
+                        width: 20px;
+                        height: 20px;
+                        border-radius: 50%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }                 
                 }
+                
       
                 
             
@@ -96,6 +111,21 @@
                         font-size: 18px;
                         text-transform: uppercase;
                     }
+                    .pages-nav{
+                        display: none;
+                    }
+                    .pages-open{
+                        display: block;
+                    }
+                }
+                .pages{
+                    p{
+                        display: flex;
+                        align-items: center;
+                    }
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
                 }
             }
         }
