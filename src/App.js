@@ -7,7 +7,7 @@ import Contact from "./pages/Contact";
 import Search from "./pages/Search";
 import Login from "./pages/Login";
 import MobileMenu from "./pages/MobileMenu";
-
+import Products from "./pages/Products";
 function App() {
   return (
     <>
@@ -21,6 +21,7 @@ function App() {
     <Route path="/search" element={<Search/>}/>
     <Route path="/login" element={<Login/>}/>
     </Routes>
+    <Products/>
     </>
   );
 }
