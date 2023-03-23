@@ -10,6 +10,7 @@ import MobileMenu from "./pages/MobileMenu";
 import Products from "./pages/Products";
 import Carusel from "./pages/Carusel";
 import Trend from "./pages/Trend";
+import Countdownn from "./pages/Countdownn";
 function App() {
   return (
     <>
@@ -26,6 +27,7 @@ function App() {
     <Products/>
     <Carusel/>
     <Trend />
+    <Countdownn/>
     </>
   );
 }
