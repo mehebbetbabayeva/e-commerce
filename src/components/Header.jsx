@@ -4,8 +4,7 @@ import logo from "../assets/img/logo.png.webp";
 import { VscSearch , VscHeart} from "react-icons/vsc";
 import { SlBag} from "react-icons/sl";
 import {BiMenu} from "react-icons/bi";
-import { useState } from 'react';
-import MobileMenu from '../pages/MobileMenu';
+
 
 
 const Header = () => {

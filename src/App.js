@@ -9,6 +9,7 @@ import Login from "./pages/Login";
 import MobileMenu from "./pages/MobileMenu";
 import Products from "./pages/Products";
 import Carusel from "./pages/Carusel";
+import Trend from "./pages/Trend";
 function App() {
   return (
     <>
@@ -24,6 +25,7 @@ function App() {
     </Routes>
     <Products/>
     <Carusel/>
+    <Trend />
     </>
   );
 }
