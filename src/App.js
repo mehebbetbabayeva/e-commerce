@@ -12,6 +12,7 @@ import Carusel from "./pages/Carusel";
 import Trend from "./pages/Trend";
 import Countdownn from "./pages/Countdownn";
 import ProductsImage from "./pages/ProductsImage";
+import Footer from "./pages/Footer"
 function App() {
   return (
     <>
@@ -30,6 +31,7 @@ function App() {
     <Trend />
     <Countdownn/>
     <ProductsImage/>
+    <Footer/>
     </>
   );
 }

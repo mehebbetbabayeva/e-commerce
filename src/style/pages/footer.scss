@@ -1,0 +1,141 @@
+footer{
+    width:100%;
+    height: 250px;
+    .container{
+        .footer-content{
+            width: 100%;
+            height: 250px;
+            display: flex;
+            flex-wrap:wrap;
+            justify-content: space-between;
+            align-items: center;
+            .footer-item-left{
+                width: 30%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                .footer-logo{
+                    width:30%;
+                    img{
+                        width:100%;
+                    }
+                }
+                ul{
+                    
+                    display: flex;
+                    li{
+                        margin-right: 10px;
+                    }
+                }
+                p{
+                    margin: 20px 0;
+                    color:gray;
+                }
+            }
+            .footer-item-links{
+                width: 15%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                h1{
+                    font-size: 20px;
+                    margin-bottom: 20px;
+                }
+                ul{
+                    display: flex;
+                   flex-direction: column;
+                    li{
+                        margin-bottom: 10px;
+                        a{
+                            color: gray;
+                            font-size: 18px;
+                        }
+                    }
+                }
+            }
+            .footer-email{
+                height: 100%;
+                width: 38%;
+                display:flex;
+                flex-direction:column;
+                padding: 0 10px;
+                h1{
+                    font-size:18px;
+                }
+                .email{
+                    margin: 20px 0;
+                    width: 100%;
+                    height: 60px;
+                    border-radius: 40px;
+                    border: 1px solid gray;
+                    display: flex;
+                    align-items: center;
+                    input{
+                        width: 60%;
+                        height: 50px;
+                        border-radius: 30px;
+                        padding: 5px;
+                        border: none;
+                        font-size: 16px;
+                        outline: none;
+                    }
+                    .subscribe{
+                        margin-right: 5px;
+                        cursor: pointer;
+                        width: 150px;
+                        height: 50px;
+                        background-color: red;
+                        border-radius: 40px;
+                        color: white;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                }
+                .icons{
+                    display: flex;
+                    width: 60%;
+                    justify-content: space-between;
+                    i{
+                        width:40px;
+                        height: 40px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        background-color: gray;
+                        border-radius: 50%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width:320px) and (max-width:760px){
+    footer{
+        height: auto;
+        .container{
+            .footer-content{
+                height: auto;
+                flex-direction: column;
+                .footer-item-left{
+                    width: 100%;
+                }
+                .footer-item-links{
+                    width: 100%;
+                    margin: 15px 0;
+                   
+                }
+                .footer-email{
+                    
+                    width: 100%; 
+                    .icons{
+                        width: 100%;
+                        
+                    }
+                }
+    
+            }
+        }
+    }
+}
