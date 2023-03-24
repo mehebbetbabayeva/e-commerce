@@ -2,23 +2,22 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import {AiFillHome} from "react-icons/ai";
 import {IoIosArrowForward} from "react-icons/io";
-import { useState } from 'react';
+import { useState ,useEffect } from 'react';
 import List from '@mui/material/List';
 import ListItemButton from '@mui/material/ListItemButton';
-
 import ListItemText from '@mui/material/ListItemText';
 import Collapse from '@mui/material/Collapse';
-
+import axios from 'axios';
 import ExpandLess from '@mui/icons-material/ExpandLess';
 import ExpandMore from '@mui/icons-material/ExpandMore';
-
+import {BsArrowsAngleContract} from "react-icons/bs"
+import{ VscHeart} from "react-icons/vsc"
+import { SlBag} from "react-icons/sl";
+import ProductsImage from "../pages/ProductsImage";
+import Footer from "../pages/Footer";
 
 const Shop = () => {
-  // const [open, setOpen] = React.useState(true);
-
-  // const handleClick = () => {
-  //   setOpen(!open);
-  // };
+  
 
 const [isOpen1, setIsOpen1] = useState(false);
 const [isOpen2, setIsOpen2] = useState(false);
@@ -54,7 +53,7 @@ const handleChange = (event) => {
 const sizeList = [
   { value: "xxs", label: "XXS" },
   { value: "xs", label: "XS" },
-  { value: "xs-s", label: "XS_S" },
+  { value: "xs-s", label: "XS-S" },
   { value: "s", label: "S" },
   { value: "m", label: "M" },
   { value: "m-l", label: "M-L" },
@@ -78,8 +77,17 @@ const colorList = [
     color:"gray",
     paddingLeft:"40px",
   }
+  const[data,setData]= useState([])
+  useEffect(()=>{
+    axios("https://fakestoreapi.com/products").then((res)=>{
+      setData(res.data.slice(0,9))
+     
+    })
+    .catch(error=>console.log(error))
+  },[])
 
   return (
+    <>
     <div className='shop-content'>
       <div className="container">
        <div className="shop">
@@ -237,22 +245,40 @@ const colorList = [
         </div>
       </div>
     <div className="shop-products">
-      
+    <div className="products-card">
+              {data.map(item=>(
+                <div className="card-item" key={item.id}>
+                <img src={item.image} alt="" />
+                <div className="card-hover">
+                  <div><BsArrowsAngleContract/></div>
+                  <div><VscHeart/></div>
+                  <div><SlBag/></div>
+                </div>
+              
+                <div className="card-title">
+                   <p>{item.title.slice(0,20)}</p>
+                   <div className="card-star">
+                    Rating:{item.rating.rate}
+                   </div>
+                   <span>${item.price}</span>
+                </div>
+             </div>
+              )
+
+              )}
+             
+             </div>
     </div>
        </div>
        </div>
       </div>
     </div>
+     <ProductsImage/>
+     <Footer/>
+     </>
   )
 }
 
 export default Shop
 
 
-// //{/* <div className="categories">
-// <h1>categories</h1>
-// <div className="categories-title">
-//  <h3>women</h3>
-
-// </div>
-// </div> */}
