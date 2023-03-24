@@ -4,8 +4,14 @@ import category2 from "../assets/img/category-2.jpg.webp";
 import category3 from "../assets/img/category-3.jpg.webp";
 import category4 from "../assets/img/category-4.jpg.webp";
 import category5 from "../assets/img/category-5.jpg.webp";
+import Products from "../pages/Products";
+import Carusel from "../pages/Carusel";
+import Trend from "../pages/Trend";
+import Countdownn from "../pages/Countdownn";
+import ProductsImage from "../pages/ProductsImage";
+import Footer from "../pages/Footer";
 const Home = () => {
-  return (
+  return (<>
     <section id='home'>
         <div className="home-left" style={{ backgroundImage:`url(${category1})` }}>
          
@@ -37,6 +43,14 @@ const Home = () => {
          </div>
         </div>
     </section>
+       <Products/> 
+     <Carusel/> 
+    <Trend />
+    <Countdownn/>
+    <ProductsImage/>
+    <Footer/>
+    </>
+
   )
 }
 

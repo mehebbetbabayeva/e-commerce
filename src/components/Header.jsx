@@ -5,8 +5,6 @@ import { VscSearch , VscHeart} from "react-icons/vsc";
 import { SlBag} from "react-icons/sl";
 import {BiMenu} from "react-icons/bi";
 
-
-
 const Header = () => {
     //menu icona click olduqda menu slide acilsin
     
@@ -17,6 +15,7 @@ const Header = () => {
   }
 
   return (
+ 
     <header>
         <div className="header-logo">
           <NavLink to="/"> <img src={logo} alt="header-logo" /></NavLink>
@@ -51,6 +50,8 @@ const Header = () => {
         </button> 
          
     </header>
+   
+   
   )
 }
 
